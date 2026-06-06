@@ -2,27 +2,22 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
 
 const socialLinks = [
   {
-    href: 'https://github.com/yourusername',
+    href: 'https://github.com/mithilesh-kumar-us/',
     icon: FaGithub,
     label: 'GitHub',
   },
   {
-    href: 'https://linkedin.com/in/yourusername',
+    href: 'https://www.linkedin.com/in/mithileshkumarus/',
     icon: FaLinkedin,
     label: 'LinkedIn',
   },
   {
-    href: 'https://twitter.com/yourusername',
-    icon: FaTwitter,
-    label: 'Twitter',
-  },
-  {
-    href: 'mailto:your.email@example.com',
+    href: 'mailto:mithilesh02905@gmail.com',
     icon: HiMail,
     label: 'Email',
   },
@@ -33,6 +28,8 @@ const footerLinks = [
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
+  { href: '#education', label: 'Education' },
+  { href: '#achievements', label: 'Achievements' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -49,13 +46,12 @@ export function Footer() {
               href="/"
               className="inline-block text-xl font-bold text-white transition-colors hover:text-primary-400"
             >
-              <span className="gradient-text">&lt;</span>
-              Portfolio
-              <span className="gradient-text">/&gt;</span>
+            <span className="gradient-text">&lt;</span>
+            Mithilesh
+            <span className="gradient-text">/&gt;</span>
             </Link>
             <p className="text-sm text-dark-400">
-              Building digital experiences with passion and precision. Always learning, always
-              growing.
+            Building intelligent web solutions with a passion for Full-Stack & AI/ML. Currently at SAP Labs, B.Tech @ Amrita.
             </p>
           </div>
 
@@ -101,7 +97,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-12 border-t border-dark-800/50 pt-8 text-center">
           <p className="text-sm text-dark-500">
-            © {currentYear} Portfolio. All rights reserved.
+            © {currentYear} Mithilesh Kumar U S. All rights reserved.
           </p>
           <p className="mt-2 text-xs text-dark-600">
             Built with Next.js, TypeScript, and Tailwind CSS

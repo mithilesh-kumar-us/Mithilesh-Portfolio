@@ -13,45 +13,72 @@ import {
   SiTailwindcss,
   SiPostgresql,
   SiMongodb,
-  SiDocker,
-  SiAmazonwebservices,
   SiGit,
-  SiGraphql,
-  SiRedux,
+  SiMysql,
+  SiFlask,
+  SiBootstrap,
   SiFigma,
-  SiVercel,
+  SiAmazonwebservices,
+  SiSpringboot,
+  SiTensorflow,
+  SiNumpy,
 } from 'react-icons/si';
+import { FaJava, FaDatabase } from 'react-icons/fa';
+import { SiCplusplus } from 'react-icons/si';
 
 const skillCategories = [
   {
-    title: 'Frontend',
+    title: 'Languages',
     skills: [
-      { name: 'React', icon: SiReact, color: '#61DAFB' },
-      { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
-      { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+      { name: 'C++', icon: SiCplusplus, color: '#00599C' },
+      { name: 'Python', icon: SiPython, color: '#3776AB' },
       { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
-      { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
-      { name: 'Redux', icon: SiRedux, color: '#764ABC' },
+      { name: 'Java', icon: FaJava, color: '#ED8B00' },
+      { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+      { name: 'SQL', icon: FaDatabase, color: '#4479A1' },
     ],
   },
   {
-    title: 'Backend',
+    title: 'Frontend',
+    skills: [
+      { name: 'React.js', icon: SiReact, color: '#61DAFB' },
+      { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
+      { name: 'Bootstrap', icon: SiBootstrap, color: '#7952B3' },
+    ],
+  },
+  {
+    title: 'Backend & Frameworks',
     skills: [
       { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
-      { name: 'Python', icon: SiPython, color: '#3776AB' },
+      { name: 'Express.js', icon: SiNodedotjs, color: '#ffffff' },
+      { name: 'Flask', icon: SiFlask, color: '#ffffff' },
+      { name: 'Spring Boot', icon: SiSpringboot, color: '#6DB33F' },
+    ],
+  },
+  {
+    title: 'Databases',
+    skills: [
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
+      { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
-      { name: 'GraphQL', icon: SiGraphql, color: '#E10098' },
+    ],
+  },
+  {
+    title: 'AI / ML & Data',
+    skills: [
+      { name: 'TensorFlow', icon: SiTensorflow, color: '#FF6F00' },
+      { name: 'NumPy', icon: SiNumpy, color: '#013243' },
+      { name: 'Scikit-learn', icon: SiPython, color: '#F7931E' },
     ],
   },
   {
     title: 'Tools & Cloud',
     skills: [
       { name: 'Git', icon: SiGit, color: '#F05032' },
-      { name: 'Docker', icon: SiDocker, color: '#2496ED' },
       { name: 'AWS', icon: SiAmazonwebservices, color: '#FF9900' },
-      { name: 'Vercel', icon: SiVercel, color: '#ffffff' },
       { name: 'Figma', icon: SiFigma, color: '#F24E1E' },
+      { name: 'Postman', icon: SiNodedotjs, color: '#FF6C37' },
     ],
   },
 ];
@@ -66,9 +93,7 @@ export function Skills() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
+      transition: { staggerChildren: 0.1 },
     },
   };
 
@@ -122,7 +147,7 @@ export function Skills() {
                     >
                       <skill.icon size={28} />
                     </div>
-                    <span className="text-sm font-medium text-dark-300 group-hover:text-white">
+                    <span className="text-center text-sm font-medium text-dark-300 group-hover:text-white">
                       {skill.name}
                     </span>
                   </motion.div>
@@ -132,7 +157,6 @@ export function Skills() {
           ))}
         </motion.div>
 
-        {/* Additional Skills Text */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -142,7 +166,7 @@ export function Skills() {
           <p className="text-dark-400">
             Also experienced with:{' '}
             <span className="text-dark-300">
-              REST APIs, CI/CD, Testing (Jest, Cypress), Agile/Scrum, UI/UX Design
+              DSA, REST APIs, Embedded C, Notion, Pandas, Matplotlib, SciPy
             </span>
           </p>
         </motion.div>

@@ -3,6 +3,7 @@ import { Inter, Fira_Code } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import { PortfolioWrapper } from '@/components/ui/PortfolioWrapper';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,41 +23,45 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Developer Portfolio | Full Stack Developer',
+  title: 'Mithilesh Kumar U S | Full Stack & AI/ML Developer',
   description:
-    'Professional portfolio showcasing web development projects, skills, and experience. Specializing in React, Next.js, TypeScript, and modern web technologies.',
+    'Portfolio of Mithilesh Kumar U S — B.Tech student at Amrita School of Engineering, iXp Intern at SAP Labs. Passionate about Full-Stack Development, AI/ML, and building intelligent solutions.',
   keywords: [
-    'web developer',
-    'full stack developer',
-    'React developer',
-    'Next.js',
-    'TypeScript',
-    'portfolio',
+    'Mithilesh Kumar',
+    'Full Stack Developer',
+    'AI ML Developer',
+    'React Developer',
+    'Python',
+    'Node.js',
+    'Spring Boot',
+    'SAP Labs',
+    'Amrita',
+    'Portfolio',
   ],
-  authors: [{ name: 'Developer' }],
-  creator: 'Developer',
+  authors: [{ name: 'Mithilesh Kumar U S' }],
+  creator: 'Mithilesh Kumar U S',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: 'Developer Portfolio',
-    title: 'Developer Portfolio | Full Stack Developer',
+    siteName: 'Mithilesh Kumar | Portfolio',
+    title: 'Mithilesh Kumar U S | Full Stack & AI/ML Developer',
     description:
-      'Professional portfolio showcasing web development projects, skills, and experience.',
+      'Portfolio of Mithilesh Kumar U S — iXp Intern at SAP Labs, B.Tech @ Amrita. Full-Stack, AI/ML developer.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Developer Portfolio',
+        alt: 'Mithilesh Kumar Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Developer Portfolio | Full Stack Developer',
+    title: 'Mithilesh Kumar U S | Full Stack & AI/ML Developer',
     description:
-      'Professional portfolio showcasing web development projects, skills, and experience.',
+      'Portfolio of Mithilesh Kumar U S — iXp Intern at SAP Labs, B.Tech @ Amrita.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -80,9 +85,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${firaCode.variable}`}>
       <body className="min-h-screen font-sans">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <PortfolioWrapper>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </PortfolioWrapper>
       </body>
     </html>
   );

@@ -3,64 +3,53 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { HiChip, HiDatabase, HiDocumentText } from 'react-icons/hi';
 
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
+    title: "Huntington's Disease Prediction",
+    subtitle: 'EEG Signal Classification using Deep Learning',
     description:
-      'A full-featured e-commerce platform with product management, cart functionality, secure payments, and order tracking. Built for scalability and performance.',
-    technologies: ['Next.js', 'TypeScript', 'Stripe', 'PostgreSQL', 'Tailwind CSS'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com/yourusername/ecommerce',
+      'Built a deep learning pipeline to classify Huntington\'s disease using EEG data, processing 70+ clinical signals across 1000+ time samples. Applied FFT to extract top 50 power spectral features per signal. Designed a 1D CNN–LSTM hybrid model achieving 92.3% accuracy, 91% precision, and 93% recall. Enables early-stage neurodegenerative disease detection with low false positives.',
+    technologies: ['Python', 'TensorFlow', 'SciPy', 'NumPy', 'MATLAB', 'Matplotlib'],
+    date: 'April 2025',
+    icon: HiChip,
+    highlight: '92.3% Accuracy',
+    category: 'AI / ML',
   },
   {
     id: 2,
-    title: 'Task Management App',
+    title: 'Expense Categorizer',
+    subtitle: 'Smart Budget Tracker with AI Insights',
     description:
-      'A collaborative task management application with real-time updates, drag-and-drop functionality, team workspaces, and progress analytics.',
-    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'Redux'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com/yourusername/taskapp',
+      'Full-stack expense tracking app that auto-categorizes 1,000+ entries from uploaded CSV using a custom keyword-based engine. Visualized trends via Plotly charts (bar, pie, radar, line) across 10+ categories. Used linear regression to forecast monthly spending and predict top 5 categories with 85%+ accuracy. AI-driven personalized saving tips based on user behavior.',
+    technologies: ['Python', 'Streamlit', 'Pandas', 'NumPy', 'Plotly', 'Scikit-learn'],
+    date: 'January 2025',
+    icon: HiDatabase,
+    highlight: '85%+ Forecast Accuracy',
+    category: 'Full Stack',
   },
   {
     id: 3,
-    title: 'AI Content Generator',
+    title: 'Document Classifying AI Assistant',
+    subtitle: 'Automated Multi-Format Document Sorting',
     description:
-      'An AI-powered content generation tool that helps users create blog posts, social media content, and marketing copy with customizable templates.',
-    technologies: ['Next.js', 'OpenAI API', 'Prisma', 'Vercel AI SDK'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com/yourusername/ai-content',
-  },
-  {
-    id: 4,
-    title: 'Real Estate Listings',
-    description:
-      'A modern real estate platform featuring property listings, advanced search filters, virtual tours, and agent contact management.',
-    technologies: ['React', 'Express', 'PostgreSQL', 'Mapbox'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com/yourusername/realestate',
-  },
-  {
-    id: 5,
-    title: 'Fitness Tracker',
-    description:
-      'A comprehensive fitness tracking app with workout logging, progress charts, nutrition tracking, and personalized workout recommendations.',
-    technologies: ['React Native', 'Firebase', 'Chart.js'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com/yourusername/fitness',
-  },
-  {
-    id: 6,
-    title: 'Developer Portfolio',
-    description:
-      'A modern, responsive portfolio website built with Next.js and Framer Motion, featuring smooth animations and optimal performance.',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com/yourusername/portfolio',
+      'AI-powered classifier that automates document sorting with 95% accuracy, capable of processing 200+ documents efficiently. Supports multi-format document processing including PDFs, Word files, and scanned images. Deployed with scalable architecture for real-time classification and seamless integration across diverse data sources.',
+    technologies: ['React.js', 'Flask', 'PostgreSQL', 'Llama', 'LayoutLMv3'],
+    date: 'December 2024',
+    icon: HiDocumentText,
+    highlight: '95% Classification Accuracy',
+    category: 'Full Stack + AI',
   },
 ];
+
+const categoryColors: Record<string, string> = {
+  'AI / ML': 'text-purple-400 bg-purple-500/10 border-purple-500/30',
+  'Full Stack': 'text-blue-400 bg-blue-500/10 border-blue-500/30',
+  'Full Stack + AI': 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
+};
 
 export function Projects() {
   const { ref, inView } = useInView({
@@ -72,9 +61,7 @@ export function Projects() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
@@ -92,7 +79,7 @@ export function Projects() {
       <div className="section-container">
         <SectionHeading
           title="Featured Projects"
-          subtitle="Some of my recent work"
+          subtitle="Real-world solutions I've built"
         />
 
         <motion.div
@@ -108,50 +95,44 @@ export function Projects() {
               variants={itemVariants}
               className="card card-hover group flex flex-col overflow-hidden"
             >
-              {/* Project Image */}
-              <div className="relative aspect-video overflow-hidden bg-dark-800">
+              {/* Project Header Visual */}
+              <div className="relative aspect-video overflow-hidden bg-dark-800 flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-primary-600/10 to-dark-900" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-dark-700">
-                    {project.title.charAt(0)}
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative z-10 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary-500/20 border border-primary-500/30"
+                >
+                  <project.icon size={40} className="text-primary-400" />
+                </motion.div>
+                {/* Category badge */}
+                <div className="absolute top-3 right-3">
+                  <span className={`rounded-full border px-2.5 py-0.5 text-xs font-medium ${categoryColors[project.category]}`}>
+                    {project.category}
                   </span>
                 </div>
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 bg-dark-950/80 opacity-0 transition-opacity group-hover:opacity-100">
-                  {project.liveUrl && (
-                    <motion.a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-600 text-white transition-colors hover:bg-primary-700"
-                      aria-label="View live site"
-                    >
-                      <FaExternalLinkAlt size={18} />
-                    </motion.a>
-                  )}
-                  {project.githubUrl && (
-                    <motion.a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex h-12 w-12 items-center justify-center rounded-full bg-dark-700 text-white transition-colors hover:bg-dark-600"
-                      aria-label="View source code"
-                    >
-                      <FaGithub size={20} />
-                    </motion.a>
-                  )}
+                {/* Date */}
+                <div className="absolute bottom-3 left-3">
+                  <span className="text-xs text-dark-500">{project.date}</span>
                 </div>
               </div>
 
               {/* Project Info */}
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="mb-2 text-xl font-bold text-white transition-colors group-hover:text-primary-400">
-                  {project.title}
-                </h3>
+                <div className="mb-1">
+                  <h3 className="text-xl font-bold text-white transition-colors group-hover:text-primary-400">
+                    {project.title}
+                  </h3>
+                  <p className="text-xs text-dark-500 mt-0.5">{project.subtitle}</p>
+                </div>
+
+                {/* Highlight stat */}
+                <div className="my-3">
+                  <span className="rounded-md bg-primary-500/10 px-2.5 py-1 text-xs font-semibold text-primary-400">
+                    {project.highlight}
+                  </span>
+                </div>
+
                 <p className="mb-4 flex-1 text-sm leading-relaxed text-dark-400">
                   {project.description}
                 </p>
@@ -172,7 +153,7 @@ export function Projects() {
           ))}
         </motion.div>
 
-        {/* View More Button */}
+        {/* View More on GitHub */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -180,7 +161,7 @@ export function Projects() {
           className="mt-12 text-center"
         >
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/mithilesh-kumar-us/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary"

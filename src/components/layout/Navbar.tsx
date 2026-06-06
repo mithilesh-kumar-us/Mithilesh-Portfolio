@@ -10,6 +10,8 @@ const navLinks = [
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
+  { href: '#education', label: 'Education' },
+  { href: '#achievements', label: 'Achievements' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -45,9 +47,11 @@ export function Navbar() {
             href="/"
             className="text-xl font-bold text-white transition-colors hover:text-primary-400"
           >
-            <span className="gradient-text">&lt;</span>
-            Portfolio
-            <span className="gradient-text">/&gt;</span>
+            <span style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>&lt;</span>
+            {' '}Mithilesh{' '}
+            <span className="text-dark-400">/</span>
+            {' '}Kumar{' '}
+            <span style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>&gt;</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -62,7 +66,7 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              href="/resume.pdf"
+              href="https://www.linkedin.com/in/mithileshkumarus/overlay/1756226481101/single-media-viewer/?profileId=ACoAAEca3KgBeYqinMz3VUxoU9uTYs759hrwneQ"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm"
@@ -119,7 +123,7 @@ export function Navbar() {
                   className="mt-2"
                 >
                   <a
-                    href="/resume.pdf"
+                    href="https://www.linkedin.com/in/mithileshkumarus/overlay/1756226481101/single-media-viewer/?profileId=ACoAAEca3KgBeYqinMz3VUxoU9uTYs759hrwneQ"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary w-full text-center text-sm"
