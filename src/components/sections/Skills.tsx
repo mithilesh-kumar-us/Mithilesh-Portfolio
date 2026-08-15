@@ -166,7 +166,7 @@ export function Skills() {
           <p className="text-dark-400">
             Also experienced with:{' '}
             <span className="text-dark-300">
-              DSA, REST APIs, Embedded C, Notion, Pandas, Matplotlib, SciPy
+              DSA, Operating systems, Computer Networks, System Design, Database Management, Distributed Systems
             </span>
           </p>
         </motion.div>

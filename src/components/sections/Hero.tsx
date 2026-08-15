@@ -344,7 +344,7 @@ export function Hero() {
             className="mx-auto mb-10 max-w-2xl text-lg text-dark-400 sm:text-xl"
           >
             B.Tech student at Amrita School of Engineering, building scalable full-stack applications
-            and intelligent AI/ML solutions. Currently interning at SAP Labs, open to exciting opportunities.
+            and intelligent AI/ML solutions. Ex-Intern at SAP Labs, open to exciting opportunities.
           </motion.p>
 
           {/* CTA Buttons */}

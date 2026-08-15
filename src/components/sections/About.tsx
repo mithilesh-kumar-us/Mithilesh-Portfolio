@@ -91,7 +91,7 @@ export function About() {
                 Passionate Developer & Problem Solver
               </h3>
               <p className="text-dark-300 leading-relaxed">
-                I'm a 4th-year B.Tech student in Computer and Communication Engineering at Amrita School of Engineering, Chennai, maintaining a CGPA of 8.9. Currently an iXp Intern at SAP Labs, building backend APIs and knowledge-base systems with Java and Spring Boot.
+                I'm a 4th-year B.Tech student in Computer and Communication Engineering at Amrita School of Engineering, Chennai, maintaining a CGPA of 8.9.  Ex-intern at SAP Labs, build backend APIs collection workflow and knowledge-base systems MCP servers.
               </p>
               <p className="text-dark-300 leading-relaxed">
                 My interests span Full-Stack Development, AI/ML, and competitive programming. I enjoy building end-to-end solutions — from intelligent ML models and data pipelines to responsive web applications — and have shipped 10+ projects and won 5+ hackathons, including a finalist slot at IIT Madras.
@@ -103,7 +103,7 @@ export function About() {
 
             {/* Tech Stack Quick View */}
             <div className="flex flex-wrap gap-2">
-              {['C++', 'Python', 'JavaScript', 'React.js', 'Node.js', 'Flask', 'Spring Boot', 'PostgreSQL', 'AWS'].map(
+              {['C++', 'Python', 'JavaScript', 'React.js', 'Node.js', 'REST', 'Spring Boot', 'PostgreSQL', 'AWS'].map(
                 (tech) => (
                   <span
                     key={tech}
