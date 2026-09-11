@@ -51,7 +51,7 @@ export function Footer() {
             <span className="gradient-text">/&gt;</span>
             </Link>
             <p className="text-sm text-dark-400">
-            Building intelligent web solutions with a passion for Full-Stack & AI/ML. Currently at SAP Labs, B.Tech @ Amrita.
+            Building intelligent web solutions with a passion for applied AI & full-stack systems. Ex-Intern @ SAP Labs, B.Tech @ Amrita.
             </p>
           </div>
 

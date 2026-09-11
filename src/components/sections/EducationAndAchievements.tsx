@@ -12,8 +12,8 @@ const education = [
     institution: 'Amrita School of Engineering',
     location: 'Chennai, India',
     period: 'Aug 2023 – May 2027',
-    score: 'CGPA: 8.9 / 10.0',
-    coursework: ['Data Structures & Algorithms', 'OOP', 'Operating Systems', 'DBMS', 'Machine Learning', 'Data Science', 'Software Engineering', 'Computer Architecture'],
+    score: 'CGPA: 8.91 / 10.0',
+    coursework: ['Data Structures & Algorithms', 'OOP', 'Operating Systems', 'DBMS', 'Computer Networks', 'Machine Learning', 'Data Science', 'Deep Learning', 'Distributed Systems'],
   },
   {
     id: 2,

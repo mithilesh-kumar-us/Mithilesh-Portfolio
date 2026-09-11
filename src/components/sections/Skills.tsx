@@ -15,16 +15,19 @@ import {
   SiMongodb,
   SiGit,
   SiMysql,
-  SiFlask,
-  SiBootstrap,
-  SiFigma,
+  SiFastapi,
   SiAmazonwebservices,
-  SiSpringboot,
   SiTensorflow,
-  SiNumpy,
+  SiPytorch,
+  SiLangchain,
+  SiHuggingface,
+  SiDocker,
+  SiGithubactions,
+  SiRedis,
+  SiCplusplus,
 } from 'react-icons/si';
 import { FaJava, FaDatabase } from 'react-icons/fa';
-import { SiCplusplus } from 'react-icons/si';
+import { HiChip, HiShare, HiSearch } from 'react-icons/hi';
 
 const skillCategories = [
   {
@@ -32,8 +35,8 @@ const skillCategories = [
     skills: [
       { name: 'C++', icon: SiCplusplus, color: '#00599C' },
       { name: 'Python', icon: SiPython, color: '#3776AB' },
-      { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
       { name: 'Java', icon: FaJava, color: '#ED8B00' },
+      { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
       { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
       { name: 'SQL', icon: FaDatabase, color: '#4479A1' },
     ],
@@ -44,16 +47,14 @@ const skillCategories = [
       { name: 'React.js', icon: SiReact, color: '#61DAFB' },
       { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
       { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
-      { name: 'Bootstrap', icon: SiBootstrap, color: '#7952B3' },
     ],
   },
   {
-    title: 'Backend & Frameworks',
+    title: 'Backend',
     skills: [
       { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
       { name: 'Express.js', icon: SiNodedotjs, color: '#ffffff' },
-      { name: 'Flask', icon: SiFlask, color: '#ffffff' },
-      { name: 'Spring Boot', icon: SiSpringboot, color: '#6DB33F' },
+      { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
     ],
   },
   {
@@ -62,23 +63,29 @@ const skillCategories = [
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
       { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+      { name: 'Redis', icon: SiRedis, color: '#DC382D' },
     ],
   },
   {
-    title: 'AI / ML & Data',
+    title: 'AI / ML & LLM',
     skills: [
+      { name: 'PyTorch', icon: SiPytorch, color: '#EE4C2C' },
       { name: 'TensorFlow', icon: SiTensorflow, color: '#FF6F00' },
-      { name: 'NumPy', icon: SiNumpy, color: '#013243' },
-      { name: 'Scikit-learn', icon: SiPython, color: '#F7931E' },
+      { name: 'LangChain', icon: SiLangchain, color: '#1C3C3C' },
+      { name: 'LangGraph', icon: HiShare, color: '#a855f7' },
+      { name: 'Transformers', icon: SiHuggingface, color: '#FFD21E' },
+      { name: 'RAG', icon: HiSearch, color: '#ec4899' },
+      { name: 'MCP', icon: HiChip, color: '#c084fc' },
+      { name: 'pgvector', icon: FaDatabase, color: '#4169E1' },
     ],
   },
   {
-    title: 'Tools & Cloud',
+    title: 'Cloud & DevOps',
     skills: [
       { name: 'Git', icon: SiGit, color: '#F05032' },
       { name: 'AWS', icon: SiAmazonwebservices, color: '#FF9900' },
-      { name: 'Figma', icon: SiFigma, color: '#F24E1E' },
-      { name: 'Postman', icon: SiNodedotjs, color: '#FF6C37' },
+      { name: 'Docker', icon: SiDocker, color: '#2496ED' },
+      { name: 'GitHub Actions', icon: SiGithubactions, color: '#2088FF' },
     ],
   },
 ];
@@ -166,7 +173,7 @@ export function Skills() {
           <p className="text-dark-400">
             Also experienced with:{' '}
             <span className="text-dark-300">
-              DSA, Operating systems, Computer Networks, System Design, Database Management, Distributed Systems
+              REST APIs, Microservices, Distributed Systems, Linux, DSA, Operating Systems, Computer Networks, System Design, Database Management
             </span>
           </p>
         </motion.div>

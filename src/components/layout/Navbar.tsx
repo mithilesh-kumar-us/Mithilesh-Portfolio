@@ -66,7 +66,7 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              href="https://www.linkedin.com/in/mithileshkumarus/overlay/1756226481101/single-media-viewer/?profileId=ACoAAEca3KgBeYqinMz3VUxoU9uTYs759hrwneQ"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm"
@@ -123,7 +123,7 @@ export function Navbar() {
                   className="mt-2"
                 >
                   <a
-                    href="https://www.linkedin.com/in/mithileshkumarus/overlay/1756226481101/single-media-viewer/?profileId=ACoAAEca3KgBeYqinMz3VUxoU9uTYs759hrwneQ"
+                    href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary w-full text-center text-sm"

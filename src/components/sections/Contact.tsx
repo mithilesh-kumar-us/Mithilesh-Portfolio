@@ -27,6 +27,8 @@ const socialLinks = [
   { icon: FaLinkedin, href: 'https://www.linkedin.com/in/mithileshkumarus/', label: 'LinkedIn' },
 ];
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnpqwrqo';
+
 export function Contact() {
   const resetStatusTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [formData, setFormData] = useState({
@@ -51,9 +53,21 @@ export function Contact() {
     if (resetStatusTimeoutRef.current) clearTimeout(resetStatusTimeoutRef.current);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
     } catch {
       setSubmitStatus('error');
     } finally {

@@ -7,9 +7,9 @@ import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { HiCode, HiLightningBolt, HiAcademicCap } from 'react-icons/hi';
 
 const stats = [
-  { label: 'CGPA', value: 8, suffix: '.9', icon: HiAcademicCap },
+  { label: 'CGPA', value: 8, suffix: '.91', icon: HiAcademicCap },
   { label: 'Projects Built', value: 10, suffix: '+', icon: HiCode },
-  { label: 'Hackathons Won', value: 5, suffix: '+', icon: HiLightningBolt },
+  { label: 'Hackathons Won', value: 6, suffix: '+', icon: HiLightningBolt },
 ];
 
 export function About() {
@@ -65,7 +65,7 @@ export function About() {
                 <p className="pl-4"><span className="text-green-400">role</span><span className="text-white">:</span> <span className="text-orange-300">"Full Stack + AI/ML"</span><span className="text-white">,</span></p>
                 <p className="pl-4"><span className="text-green-400">college</span><span className="text-white">:</span> <span className="text-orange-300">"Amrita, Chennai"</span><span className="text-white">,</span></p>
                 <p className="pl-4"><span className="text-green-400">year</span><span className="text-white">:</span> <span className="text-orange-300">"4th Year (2023–2027)"</span><span className="text-white">,</span></p>
-                <p className="pl-4"><span className="text-green-400">cgpa</span><span className="text-white">:</span> <span className="text-cyan-400">8.9</span><span className="text-white">,</span></p>
+                <p className="pl-4"><span className="text-green-400">cgpa</span><span className="text-white">:</span> <span className="text-cyan-400">8.91</span><span className="text-white">,</span></p>
                 <p className="pl-4"><span className="text-green-400">interests</span><span className="text-white">:</span> <span className="text-yellow-400">[</span></p>
                 <p className="pl-8"><span className="text-orange-300">"Full-Stack"</span><span className="text-white">,</span></p>
                 <p className="pl-8"><span className="text-orange-300">"AI/ML"</span><span className="text-white">,</span></p>
@@ -91,10 +91,10 @@ export function About() {
                 Passionate Developer & Problem Solver
               </h3>
               <p className="text-dark-300 leading-relaxed">
-                I'm a 4th-year B.Tech student in Computer and Communication Engineering at Amrita School of Engineering, Chennai, maintaining a CGPA of 8.9.  Ex-intern at SAP Labs, build backend APIs collection workflow and knowledge-base systems MCP servers.
+                I'm a 4th-year B.Tech student in Computer and Communication Engineering at Amrita School of Engineering, Chennai, maintaining a CGPA of 8.91. Ex-intern at SAP Labs, where I built MCP-based knowledge-base tooling and AI-driven backend workflows for API testing.
               </p>
               <p className="text-dark-300 leading-relaxed">
-                My interests span Full-Stack Development, AI/ML, and competitive programming. I enjoy building end-to-end solutions — from intelligent ML models and data pipelines to responsive web applications — and have shipped 10+ projects and won 5+ hackathons, including a finalist slot at IIT Madras.
+                My interests span applied AI, agentic systems, and full-stack development. I enjoy building end-to-end solutions — from LLM-powered tooling and real-time distributed systems to responsive web applications — and have shipped 10+ projects and won 6+ hackathons, including a finalist slot at IIT Madras.
               </p>
               <p className="text-dark-300 leading-relaxed">
                 I bring strong foundations in DSA, systems thinking, and a proven ability to work under pressure — making me a reliable contributor to any engineering team.
@@ -103,7 +103,7 @@ export function About() {
 
             {/* Tech Stack Quick View */}
             <div className="flex flex-wrap gap-2">
-              {['C++', 'Python', 'JavaScript', 'React.js', 'Node.js', 'REST', 'Spring Boot', 'PostgreSQL', 'AWS'].map(
+              {['C++', 'Python', 'TypeScript', 'React.js', 'Node.js', 'FastAPI', 'LangChain', 'PostgreSQL', 'AWS'].map(
                 (tech) => (
                   <span
                     key={tech}

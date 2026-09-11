@@ -23,17 +23,21 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Mithilesh Kumar U S | Full Stack & AI/ML Developer',
+  title: 'Mithilesh Kumar U S | Applied AI & Full Stack Engineer',
   description:
-    'Portfolio of Mithilesh Kumar U S — B.Tech student at Amrita School of Engineering, iXp Intern at SAP Labs. Passionate about Full-Stack Development, AI/ML, and building intelligent solutions.',
+    'Portfolio of Mithilesh Kumar U S — B.Tech student at Amrita School of Engineering, ex-iXp Intern at SAP Labs. Building agentic AI systems, LLM tooling, and full-stack applications.',
   keywords: [
     'Mithilesh Kumar',
     'Full Stack Developer',
-    'AI ML Developer',
+    'AI Engineer',
+    'Applied AI',
+    'LLM Developer',
+    'MCP',
+    'RAG',
     'React Developer',
     'Python',
     'Node.js',
-    'Spring Boot',
+    'FastAPI',
     'SAP Labs',
     'Amrita',
     'Portfolio',
@@ -45,12 +49,12 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteUrl,
     siteName: 'Mithilesh Kumar | Portfolio',
-    title: 'Mithilesh Kumar U S | Full Stack & AI/ML Developer',
+    title: 'Mithilesh Kumar U S | Applied AI & Full Stack Engineer',
     description:
-      'Portfolio of Mithilesh Kumar U S — iXp Intern at SAP Labs, B.Tech @ Amrita. Full-Stack, AI/ML developer.',
+      'Portfolio of Mithilesh Kumar U S — ex-iXp Intern at SAP Labs, B.Tech @ Amrita. Applied AI & full-stack engineer.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'Mithilesh Kumar Portfolio',
@@ -59,10 +63,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mithilesh Kumar U S | Full Stack & AI/ML Developer',
+    title: 'Mithilesh Kumar U S | Applied AI & Full Stack Engineer',
     description:
-      'Portfolio of Mithilesh Kumar U S — iXp Intern at SAP Labs, B.Tech @ Amrita.',
-    images: ['/og-image.png'],
+      'Portfolio of Mithilesh Kumar U S — ex-iXp Intern at SAP Labs, B.Tech @ Amrita.',
+    images: ['/og-image.svg'],
   },
   robots: {
     index: true,
